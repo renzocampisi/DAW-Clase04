@@ -1,69 +1,342 @@
+/* HEADER */
 header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     padding: 20px;
+    border-bottom: 1px solid #000;
 }
-.div-header-top {
+
+.logo-section {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
 }
-#logoHeader {
+
+#logo {
     width: 270px;
     height: auto;
+    margin: 10px 0;
 }
+
+#suscribirse {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    margin: 10px 5px;
+}
+
 #ingresar {
     background-color: white;
     color: black;
     padding: 10px 20px;
     text-decoration: none;
     border: 1px solid black;
-    border-radius: 0px;
+    margin: 10px 5px;
 }
-#suscribirse {
-    background-color: orange;
-    color: #fff;
-    padding: 10px 20px;
+
+.navHeaderTop ul, .navHeaderBot ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navHeaderTop a, .navHeaderBot a {
+    color: black;
     text-decoration: none;
-    border-radius: 0px;
+    font-size: 14px;
 }
+
+.navHeaderTop a:hover, .navHeaderBot a:hover {
+    color: orange;
+}
+
+.navHeaderBot {
+    background-color: #000A2F;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.navHeaderBot a {
+    color: white;
+}
+
+.navHeaderBot a:hover {
+    color: orange;
+}
+
+/* CONTENIDO MAIN */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenedor {
+    display: flex;
+    gap: 20px;
+}
+
+article {
+    flex: 1;
+}
+
 h1 {
     font-size: 44px;
     font-weight: 700;
-    font-family: noto-serif, serif;
+    font-family: 'noto-serif', serif;
     line-height: 52px;
     color: black;
-    margin-bottom: 9px 0;
+    margin: 0 0 15px 0;
 }
+
 h2 {
     font-size: 22px;
-    font-weight: 400;
-    font-family: noto-serif, serif;
-    line-height: 28px;
+    font-weight: bold;
+    font-family: 'noto-serif', serif;
     color: black;
-    margin-bottom: 20px;
+    margin: 20px 0 15px 0;
 }
-#piePagina {
+
+#subtitulo {
     font-size: 24px;
     font-weight: 700;
-    font-family: arimo, sans-serif;
-    line-height: 1;
+    font-family: 'arimo', sans-serif;
     color: black;
+    margin: 0 0 20px 0;
+}
+
+.fecha {
+    font-size: 14px;
+    color: #666;
     margin-bottom: 20px;
 }
+
+.fecha span {
+    margin-right: 20px;
+}
+
 #imgPeaje {
-    width: 70%;
+    width: 100%;
     height: auto;
     margin: 20px 0;
-    margin-left: 25px;
     display: block;
 }
+
 .texto {
     font-size: 18px;
     font-weight: 400;
-    font-family: noto-serif, serif;
+    font-family: 'noto-serif', serif;
     line-height: 28px;
     color: black;
     margin-bottom: 20px;
+}
+
+.texto p {
+    margin: 0 0 15px 0;
+}
+
+ol {
+    font-size: 18px;
+    font-family: 'noto-serif', serif;
+    color: black;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+ol li {
+    margin-bottom: 10px;
+    line-height: 26px;
+}
+
+p {
+    font-size: 18px;
+    font-family: 'noto-serif', serif;
+    color: black;
+    line-height: 28px;
+    margin-bottom: 15px;
+}
+
+/* CONTENIDO FOOTER */
+footer {
+    background-color: #000A2F;
+    color: white;
+    padding: 30px 20px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer div {
+    margin: 10px;
+    text-align: center;
+}
+
+footer img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+footer input {
+    padding: 5px;
+}
+
+footer button {
+    padding: 5px 10px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: darkorange;
+}
+
+article form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+article label {
+    font-weight: bold;
+}
+
+article input, article textarea {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+article button {
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+article button:hover {
+    background-color: darkorange;
+}
+
+article fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+article legend {
+    font-weight: bold;
+}
+
+article select {
+    padding: 5px;
+}
+
+article input[type="radio"], article input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+article button[type="reset"] {
+    background-color: gray;
+}
+
+article button[type="reset"]:hover {
+    background-color: darkgray;
+}
+
+article .botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    
+    .navHeaderTop ul, .navHeaderBot ul {
+        gap: 8px;
+    }
+    
+    .navHeaderTop a, .navHeaderBot a {
+        font-size: 12px;
+    }
+    
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+    
+    main {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .logo-section {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    #suscribirse, #ingresar {
+        width: calc(100% - 20px);
+        margin: 5px 0;
+        text-align: center;
+    }
 }

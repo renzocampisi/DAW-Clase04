@@ -1,35 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Capital - Peaje Rosario Victoria</title>
     <link rel="icon" href="https://media.licdn.com/dms/image/v2/C4E0BAQEtv0wUkm1BeA/company-logo_200_200/company-logo_200_200/0/1630640859579/diario_la_capital_logo?e=2147483647&v=beta&t=rbBEq00ylb07pDAXhy9OH_A1zkd4G6HQKGIsqnXhSbY" type="image/png">
-    <title>La capital</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <!-- Centrar todo -->
-         <div class="div-header-top">
-            <nav>
-                <ul>
-                    <li><a href="https://inmuebles.lacapital.com.ar/">Inmuebles</a></li>
-                    <li><a href="https://motores.lacapital.com.ar/">Motores</a></li>
-                    <li><a href="https://trabajo.lacapital.com.ar/">Trabajo</a></li>
-                    <li><a href="https://www.lacapital.com.ar/contenidos/profesionales.html">Profesionales</a></li>
-                    <li><a href="https://funebres.lacapital.com.ar/funebres/publicar/">Funebres</a></li>
-                    <li><a href="https://beneficios.lacapital.com.ar/">Beneficios LA CAPITAL</a></li>
-                    <li><a href="https://www.lacapital.com.ar/secciones/turismo.html">Turismo</a></li>
-                </ul>
-            </nav>
-         </div>
-        
-        <img id="logoHeader" src="https://upload.wikimedia.org/wikipedia/commons/b/b6/La_Capital_isologo.png" alt="Logo La Capital">
-        <a id="suscribirse" href="https://www.lacapital.com.ar/">Suscribite por $499</a>
-        <a id="ingresar" href="https://suscripciones.lacapital.com.ar/id/login/?continue=https://www.lacapital.com.ar/la-ciudad/puente-rosario-victoria-hoy-el-peaje-habra-dos-formas-pago-ninguna-efectivo-n10254424.html">Ingresar</a>
-        <!-- Colocar uno al lado del otro -->
-        <nav>
+        <nav class="navHeaderTop">
+            <ul>
+                <li><a href="https://inmuebles.lacapital.com.ar/">Inmuebles</a></li>
+                <li><a href="https://motores.lacapital.com.ar/">Motores</a></li>
+                <li><a href="https://trabajo.lacapital.com.ar/">Trabajo</a></li>
+                <li><a href="https://www.lacapital.com.ar/contenidos/profesionales.html">Profesionales</a></li>
+                <li><a href="https://funebres.lacapital.com.ar/funebres/publicar/">Funebres</a></li>
+                <li><a href="https://beneficios.lacapital.com.ar/">Beneficios LA CAPITAL</a></li>
+                <li><a href="https://www.lacapital.com.ar/secciones/turismo.html">Turismo</a></li>
+            </ul>
+        </nav>
+        <div class="logo-section">
+            <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b6/La_Capital_isologo.png" alt="Logo">
+            <a id="suscribirse" href="https://www.lacapital.com.ar/">Suscribite por $499</a>
+            <a id="ingresar" href="https://suscripciones.lacapital.com.ar/id/login/">Ingresar</a>
+        </div>
+        <nav class="navHeaderBot">
             <ul>
                 <li><a href="https://www.lacapital.com.ar/secciones/ultimo-momento.html">Ultimas noticias</a></li>
                 <li><a href="https://www.lacapital.com.ar/secciones/laciudad.html">Ciudad</a></li>
@@ -43,30 +40,32 @@
             </ul>
         </nav>
     </header>
-    <!-- Links que deberia estar a la derecha -->
+
     <main>
-        <article>
-            <div>
+        <div class="contenedor">
+            <article>
                 <h1>Puente Rosario-Victoria: desde hoy en el peaje habrá dos formas de pago, ninguna con efectivo</h1>
-                <p id="piePagina">La concesionaria activa el nuevo sistema sin cabinas en la ruta 174. Plantean dos modalidades de pago y tarifas diferenciadas según el método</p>
-                <div>
+                <p id="subtitulo">La concesionaria activa el nuevo sistema sin cabinas en la ruta 174. Plantean dos modalidades de pago y tarifas diferenciadas según el método</p>
+                <div class="fecha">
                     <span>16 de Abril 2026</span>
                     <span>06:00hs</span>
                 </div>
-                <img id="imgPeaje" src="https://media.lacapital.com.ar/p/8de224e60f8f39c8b5a2ff96d4dda235/adjuntos/203/imagenes/102/273/0102273160/puente-rosario-victoriajpeg.jpeg" alt="Imagen del puente Rosario-Victoria">
+                <img id="imgPeaje" src="https://media.lacapital.com.ar/p/8de224e60f8f39c8b5a2ff96d4dda235/adjuntos/203/imagenes/102/273/0102273160/puente-rosario-victoriajpeg.jpeg" alt="Puente Rosario-Victoria">
+                
                 <div class="texto">
                     <p>Desde este jueves 16 de abril, la empresa Conexión Alto Delta comenzará a cobrar el peaje en la ruta nacional 174, que conecta Rosario con Victoria, con un cambio clave: ya no se aceptará efectivo.</p>
                 </div>
                 <div class="texto">
                     <p>El nuevo sistema introduce dos modalidades de pago, TelePASE o pago electrónico, y elimina las cabinas tradicionales, en una apuesta por agilizar la circulación en uno de los corredores más transitados de la región.</p>
                 </div>
+
                 <h2>Cómo será el nuevo sistema</h2>
                 <div class="texto">
                     <p>La estación de peaje operará con dos vías por sentido de circulación:</p>
                 </div>
                 <ol>
                     <li>Una exclusiva para Telepase, que permite pasar sin detenerse</li>
-                    <li>Otra combinada, donde se podrá pagar con <strong>tarjeta de debito o credito</strong> mediante tecnología contactless</li>
+                    <li>Otra combinada, donde se podrá pagar con <strong>tarjeta de débito o crédito</strong> mediante tecnología contactless</li>
                 </ol>
                 <div class="texto">
                     <p>Desde la concesionaria indicaron que el Telepase será la opción más conveniente, ya que ofrece tarifas más bajas y mayor rapidez.</p>
@@ -74,6 +73,7 @@
                 <div class="texto">
                     <p>En cambio, quienes opten por el pago electrónico deberán detenerse en los tótems y abonarán una tarifa más alta, que en algunos casos duplica el valor base.</p>
                 </div>
+
                 <h2>Cuánto costará el peaje</h2>
                 <p>Las tarifas varían según el tipo de vehículo y el método de pago:</p>
                 <ol>
@@ -84,79 +84,80 @@
                     <li>Más de 6 ejes: hasta $10.439,15 con pago electrónico</li>
                 </ol>
                 <p><strong>El uso de efectivo queda completamente descartado.</strong></p>
-                <img src="https://media.lacapital.com.ar/p/def5e7b3ec1b670e030307b62a2b4477/adjuntos/203/imagenes/103/091/0103091993/642x0/smart/peaje.jpg" alt="Imagen de tarifas de peaje">
+                <img src="https://media.lacapital.com.ar/p/def5e7b3ec1b670e030307b62a2b4477/adjuntos/203/imagenes/103/091/0103091993/642x0/smart/peaje.jpg" alt="Tarifa de peaje">
+
                 <h2>Asistencia y transición</h2>
                 <p>Para facilitar la adaptación, habrá personal en las vías asistiendo a los conductores y oficinas de atención abiertas todos los días de 8 a 20, donde se podrá tramitar el Telepase en el momento.</p>
                 <p><strong>Por ahora, el pago mediante código QR no estará disponible.</strong></p>
                 <p>La implementación del peaje forma parte de una etapa del contrato de concesión que incluyó trabajos de mantenimiento y mejoras en el corredor.</p>
-                <p>Entre las principales intervenciones, la empresa informó un 98% de avance en tareas de bacheo y reparación de calzada, sellado de fisuras para prolongar la vida útil del asfalto, próxima demarcación horizontal de la ruta e instalación de nueva iluminación en el puente principal</p>
+                <p>Entre las principales intervenciones, la empresa informó un 98% de avance en tareas de bacheo y reparación de calzada, sellado de fisuras para prolongar la vida útil del asfalto, próxima demarcación horizontal de la ruta e instalación de nueva iluminación en el puente principal.</p>
                 <p>Además, se colocarán más de 1.000 carteles de señalización y sistemas de control dinámico de cargas para el tránsito pesado.</p>
                 <p>También se realizaron mejoras en infraestructura y servicios, como el refuerzo del balizamiento en sectores clave del puente, remodelación de sanitarios y áreas de estacionamiento y mayor patrullaje durante las 24 horas.</p>
                 <p>En las próximas semanas, se completará la instalación del sistema de balizamiento en el canal principal de navegación.</p>
-            </div>
-        </article>
-        <aside>
-            <div>
-                <h2>Las mas leidas</h2>
-                <ol>
-                    <li>
-                        <a href="https://www.lacapital.com.ar/zoom/la-frase-maradoniana-la-que-dalma-se-refirio-manueladorni-investigado-la-justicia-n10253811.html">La frase maradoniana la que dalma se refirió</a>
-                    </li>
-                    <li>
-                        <a href="https://www.lacapital.com.ar/ovacion/recordo-su-primer-gol-newells-las-redes-y-dejo-un-mensaje-que-lo-identifica-fuertemente-el-club-n10253261.html">Recordó su primer gol en Newells, las redes y dejó un mensaje que lo identifica fuertemente con el club</a>
-                    </li>
-                    <li>
-                        <a href="https://www.lacapital.com.ar/zoom/adrian-suar-blanqueo-su-romance-la-rosarina-rocio-robles-un-evento-publico-n10253563.html">Adrian Suar blanqueó su romance con la rosarina Rocío Robles en un evento público</a>
-                    </li>
-                    <li>
-                        <a href="https://www.lacapital.com.ar/ovacion/central-quien-es-el-recio-zaguero-que-fue-convocado-primera-vez-n10253824.html">Central: quién es el récimo zaguero que fue convocado por primera vez</a>
-                    </li>
-                </ol>
-            </div>
-        </aside>
-        <form action="/form" method="post">
-            <!-- Utilizo el br solamente para generar un salto de linea, luego con css, se implementara -->
-            <label>Formulario de registro</label> <br> <br>
-            <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre"><br>
-            <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido"><br>
-            <label for="telefono">Telefono:</label>
-                <input type="tel" id="telefono" name="telefono"><br>
-            <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br>
-            <label for="password">Contrasena:</label>
-                <input type="password" id="password" name="password"><br>
-                <fieldset>
-                    <legend>Nacionalidad</legend>
-                    <select name="nacionalidad" id="nacionalidad">
-                        <option value="argentina">Argentina</option>
-                        <option value="brasil">Brasil</option>
-                        <option value="uruguay">Uruguay</option>
-                        <option value="paraguay">Paraguay</option>
-                        <option value="chile">Chile</option>
-                    </select>
-                </fieldset>
-            <fieldset>
-                <legend>Genero</legend>
-                <label><input type="radio" name="genero" id="genero-masculino" checked>Masculino</label>
-                <label><input type="radio" name="genero" id="genero-femenino">Femenino</label>
-                <label><input type="radio" name="genero" id="genero-otro">Otro</label>
-            </fieldset>
-            <fieldset>
-                <legend>Hobbies</legend>
-                <label><input type="checkbox" name="hobbies" id="hobbies-football">Football</label>
-                <label><input type="checkbox" name="hobbies" id="hobbies-basketball">Basketball</label>
-                <label><input type="checkbox" name="hobbies" id="hobbies-tennis">Tennis</label>
-                <label><input type="checkbox" name="hobbies" id="hobbies-paddle">Paddle</label>
-                <label><input type="checkbox" name="hobbies" id="hobbies-natacion">Natacion</label>
-            </fieldset>
-            <progress value="85" max="100">85%</progress><br>
-            <button type="submit">Enviar</button>
-            <button type="reset">Borrar</button>
-        </form>
+                <h2>Deja tu comentario</h2>
+                <form>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena">
+                    <fieldset>
+                        <legend>Nacionalidad</legend>
+                        <select name="nacionalidad">
+                            <option value="argentina">Argentina</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="uruguay">Uruguay</option>
+                            <option value="chile">Chile</option>
+                            <option value="bolivia">Bolivia</option>
+                            <option value="paraguay">Paraguay</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Género</legend>
+                        <input type="radio" id="masculino" name="genero" value="masculino">
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" id="femenino" name="genero" value="femenino">
+                        <label for="femenino">Femenino</label>
+                        <input type="radio" id="otro" name="genero" value="otro">
+                        <label for="otro">Otro</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Hobbies</legend>
+                        <input type="checkbox" id="football" name="hobbies" value="football">
+                        <label for="football">Football</label>
+                        <input type="checkbox" id="basketball" name="hobbies" value="basketball">
+                        <label for="basketball">Basketball</label>
+                        <input type="checkbox" id="tennis" name="hobbies" value="tennis">
+                        <label for="tennis">Tennis</label>
+                        <input type="checkbox" id="paddle" name="hobbies" value="paddle">
+                        <label for="paddle">Paddle</label>
+                        <input type="checkbox" id="natacion" name="hobbies" value="natacion">
+                        <label for="natacion">Natación</label>
+                    </fieldset>
+                    <div class="botones">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Borrar</button>
+                    </div>
+                </form>
+            </article>
+            <aside class="sidebar">
+                <h2>Más leídas</h2>
+                <ul>
+                    <li><a href="https://www.lacapital.com.ar/informacion-general/giorgia-meloni-denuncio-la-difusion-fotos-suyas-generadas-ia-n10257848.html">Giorgia Meloni denunció la difusión de fotos suyas generadas con IA</a></li>
+                    <li><a href="https://www.lacapital.com.ar/la-region/tras-cuatro-dias-intensa-busqueda-encuentran-muerta-la-joven-desaparecida-coronda-n10255909.html">Tras cuatro días de intensa búsqueda, encuentran muerta a la joven desaparecida en Coronda</a></li>
+                    <li><a href="https://www.lacapital.com.ar/zoom/dario-barassi-mostro-redes-sociales-la-carta-su-hija-querido-padre-me-voy-vivir-europa-n10257496.html">Darío Barassi mostró en redes sociales la carta de su hija: "Querido padre, me voy a vivir a Europa"</a></li>
+                    <li><a href="https://www.lacapital.com.ar/salud/crece-rosario-la-polemica-moda-las-carillas-super-blancas-los-dientes-n10256921.html">Crece en Rosario la polémica moda de las carillas superblancas en los dientes</a></li>
+                </ul>
+            </aside>
+        </div>
     </main>
-        <footer>
+
+    <footer>
         <div>
             <img src="https://media.licdn.com/dms/image/v2/C4E0BAQEtv0wUkm1BeA/company-logo_200_200/company-logo_200_200/0/1630640859579/diario_la_capital_logo?e=2147483647&v=beta&t=rbBEq00ylb07pDAXhy9OH_A1zkd4G6HQKGIsqnXhSbY" alt="Logo de La Capital">
         </div>
@@ -179,7 +180,4 @@
         </div>
     </footer>
 </body>
-    <!-- Link del articulo -->
-    <!-- https://www.lacapital.com.ar/la-ciudad/puente-rosario-victoria-hoy-el-peaje-habra-dos-formas-pago-ninguna-efectivo-n10254424.html -->
 </html>
-
