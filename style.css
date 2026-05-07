@@ -50,9 +50,15 @@ header {
 .navHeaderTop a, .navHeaderBot a {
     color: black;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
 }
+.navHeaderBot a{
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
 
+}
 .navHeaderTop a:hover, .navHeaderBot a:hover {
     color: orange;
 }
@@ -122,12 +128,13 @@ h2 {
     margin-right: 20px;
 }
 
-#imgPeaje {
+.imgPeaje {
     width: 100%;
     height: auto;
     margin: 20px 0;
     display: block;
 }
+
 
 .texto {
     font-size: 18px;
