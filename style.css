@@ -74,8 +74,7 @@ header {
 }
 
 /* Padding y sin subrayado compartidos entre ambos botones */
-#suscribirse,
-#ingresar {
+#suscribirse, #ingresar {
     padding: 10px 20px;
     text-decoration: none;
 }
@@ -92,7 +91,7 @@ header {
     border: 1px solid black;
 }
 
-/* Nav inferior: barra oscura con las secciones del diario */
+/* Nav inferior */
 .navHeaderBot {
     background-color: #000A2F;
     padding: 10px 20px;
@@ -203,8 +202,7 @@ article {
 }
 
 /* Tipografía compartida entre títulos */
-h1,
-h2 {
+h1, h2 {
     font-family: 'noto-serif', serif;
     color: black;
 }
@@ -399,9 +397,7 @@ ol li {
     margin-top: 10px;
 }
 
-/* ========================
-   FOOTER
-   ======================== */
+/* FOOTER */
 footer {
     background-color: #000A2F;
     color: white;
@@ -451,9 +447,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* ========================
-   RESPONSIVE - IPHONE (max 480px)
-   ======================== */
+/* RESPONSIVE MOBILE */
 @media (max-width: 480px) {
     header {
         padding: 10px 0 0 0;
@@ -496,7 +490,7 @@ footer a:hover {
         gap: 8px;
     }
 
-    /* Dropdown y campana vuelven al flujo normal (dejan de ser absolute) */
+    /* Menu desplegable y campana vuelven al flujo normal (dejan de ser absolute) */
     .nav-bot-izq {
         position: static;
         align-self: flex-start;
