@@ -1,89 +1,197 @@
-/* HEADER */
+/* Header */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 20px 0 0 0; /* sin padding horizontal: los navs llegan de borde a borde */
     border-bottom: 1px solid #000;
 }
 
-.logo-section {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+.navHeaderTop {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 20px;
 }
 
-#logo {
-    width: 270px;
-    height: auto;
-    margin: 10px 0;
-}
-
-#suscribirse {
-    background-color: orange;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border: none;
-    margin: 10px 5px;
-}
-
-#ingresar {
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    border: 1px solid black;
-    margin: 10px 5px;
-}
-
-.navHeaderTop ul, .navHeaderBot ul {
+.navHeaderTop > ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
     padding: 0;
     margin: 0;
 }
 
-.navHeaderTop a, .navHeaderBot a {
-    color: black;
+/* Propiedades compartidas entre los links de ambas navs */
+.navHeaderTop > ul a,
+.navHeaderBot > ul a {
     text-decoration: none;
     font-size: 15px;
 }
-.navHeaderBot a{
-    color: white;
-    text-decoration: none;
-    font-size: 28px;
-    font-weight: bold;
 
+.navHeaderTop > ul a {
+    color: black;
 }
-.navHeaderTop a:hover, .navHeaderBot a:hover {
+
+.navHeaderTop > ul a:hover,
+.navHeaderBot > ul a:hover {
     color: orange;
 }
 
+/* position: relative permite anclar el dropdown (izq) y los botones (der) */
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+/* Fijado al borde izquierdo del logo-section */
+.nav-bot-izq {
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Fijado al borde derecho del logo-section */
+.header-botones {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#logo {
+    width: 270px;
+    height: auto;
+}
+
+/* Padding y sin subrayado compartidos entre ambos botones */
+#suscribirse,
+#ingresar {
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#suscribirse {
+    background-color: orange;
+    color: white;
+    border: none;
+}
+
+#ingresar {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+/* Nav inferior: barra oscura con las secciones del diario */
 .navHeaderBot {
     background-color: #000A2F;
     padding: 10px 20px;
     width: 100%;
+    box-sizing: border-box;
 }
 
-.navHeaderBot a {
+.navHeaderBot > ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; /* items que no entran quedan ocultos en pantallas chicas */
+}
+
+.navHeaderBot > ul a {
     color: white;
+    font-weight: bold;
+    white-space: nowrap; /* evita que cada link se corte en dos líneas */
 }
 
-.navHeaderBot a:hover {
+/* Estilo de menu desplegable y el boton de la campana */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    background: none;
+    border: 1px solid black;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px 12px;
+}
+
+.dropdown-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* El menú aparece al hacer hover sobre .dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000A2F;
+    border: 1px solid #444;
+    min-width: 220px;
+    z-index: 1000;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #1a2a5e;
     color: orange;
 }
 
-/* CONTENIDO MAIN */
+.bell-btn {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.bell-btn:hover {
+    color: darkorange;
+}
+
+/* Main y Article */
 main {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Fila: artículo principal a la izquierda + sidebar a la derecha */
 .contenedor {
     display: flex;
     gap: 20px;
@@ -91,22 +199,26 @@ main {
 
 article {
     flex: 1;
+    min-width: 0; /* evita que el texto largo desborde el contenedor flex */
+}
+
+/* Tipografía compartida entre títulos */
+h1,
+h2 {
+    font-family: 'noto-serif', serif;
+    color: black;
 }
 
 h1 {
     font-size: 44px;
     font-weight: 700;
-    font-family: 'noto-serif', serif;
     line-height: 52px;
-    color: black;
     margin: 0 0 15px 0;
 }
 
 h2 {
     font-size: 22px;
     font-weight: bold;
-    font-family: 'noto-serif', serif;
-    color: black;
     margin: 20px 0 15px 0;
 }
 
@@ -135,13 +247,21 @@ h2 {
     display: block;
 }
 
-
+/* Tipografía compartida entre párrafos y bloques de texto */
+p,
 .texto {
     font-size: 18px;
-    font-weight: 400;
     font-family: 'noto-serif', serif;
-    line-height: 28px;
     color: black;
+    line-height: 28px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.texto {
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
@@ -150,6 +270,7 @@ h2 {
 }
 
 ol {
+    list-style: decimal; /* forzado: reset.css elimina todos los markers de lista */
     font-size: 18px;
     font-family: 'noto-serif', serif;
     color: black;
@@ -162,34 +283,145 @@ ol li {
     line-height: 26px;
 }
 
-p {
+/* SIDEBAR */
+.sidebar {
+    width: 280px;
+    min-width: 280px;
+    border-left: 2px solid #ccc;
+    padding-left: 20px;
+}
+
+.sidebar h2 {
     font-size: 18px;
-    font-family: 'noto-serif', serif;
-    color: black;
-    line-height: 28px;
+    font-weight: bold;
+    border-bottom: 2px solid #000A2F;
+    padding-bottom: 10px;
     margin-bottom: 15px;
 }
 
-/* CONTENIDO FOOTER */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar ul li a {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar ul li a img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.sidebar ul li a span {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.sidebar ul li a:hover span {
+    color: orange;
+}
+
+/* Form Comentarios */
+
+/* Sección independiente debajo del contenedor, alineada con el ancho del main */
+.comentarios {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.comentarios form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comentarios label,
+.comentarios legend {
+    font-weight: bold;
+}
+
+.comentarios select {
+    padding: 5px;
+}
+
+.comentarios input,
+.comentarios textarea {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.comentarios input[type="radio"],
+.comentarios input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.comentarios fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comentarios button {
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.comentarios button:hover {
+    background-color: darkorange;
+}
+
+.comentarios button[type="reset"] {
+    background-color: gray;
+}
+
+.comentarios button[type="reset"]:hover {
+    background-color: darkgray;
+}
+
+.comentarios .botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* ========================
+   FOOTER
+   ======================== */
 footer {
     background-color: #000A2F;
     color: white;
     padding: 30px 20px;
     border-top: 1px solid #ccc;
+}
+
+/* Mismo max-width que main para alinear con el contenido de la página */
+.footer-inner {
     display: flex;
     justify-content: space-around;
+    align-items: flex-start;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 footer div {
     margin: 10px;
     text-align: center;
-}
-
-footer img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
 }
 
 footer ul {
@@ -199,6 +431,14 @@ footer ul {
 
 footer li {
     margin-bottom: 5px;
+}
+
+footer img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    background-color: white; /* fondo blanco para que el logo sea visible sobre el azul */
+    padding: 5px;
 }
 
 footer a {
@@ -211,139 +451,112 @@ footer a:hover {
     text-decoration: underline;
 }
 
-footer h3 {
-    margin-bottom: 10px;
-}
-
-footer form {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-footer input {
-    padding: 5px;
-}
-
-footer button {
-    padding: 5px 10px;
-    background-color: orange;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-footer button:hover {
-    background-color: darkorange;
-}
-
-article form {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-article label {
-    font-weight: bold;
-}
-
-article input, article textarea {
-    padding: 5px;
-    border: 1px solid #ccc;
-}
-
-article button {
-    padding: 10px;
-    background-color: orange;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-article button:hover {
-    background-color: darkorange;
-}
-
-article fieldset {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-article legend {
-    font-weight: bold;
-}
-
-article select {
-    padding: 5px;
-}
-
-article input[type="radio"], article input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-article button[type="reset"] {
-    background-color: gray;
-}
-
-article button[type="reset"]:hover {
-    background-color: darkgray;
-}
-
-article .botones {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .contenedor {
-        flex-direction: column;
-    }
-    
-    h1 {
-        font-size: 32px;
-        line-height: 40px;
-    }
-    
-    .navHeaderTop ul, .navHeaderBot ul {
-        gap: 8px;
-    }
-    
-    .navHeaderTop a, .navHeaderBot a {
-        font-size: 12px;
-    }
-    
-    footer {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
+/* ========================
+   RESPONSIVE - IPHONE (max 480px)
+   ======================== */
 @media (max-width: 480px) {
     header {
-        padding: 15px;
+        padding: 10px 0 0 0;
     }
-    
+
     main {
         padding: 15px;
     }
-    
+
     h1 {
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 22px;
+        line-height: 30px;
     }
-    
+
+    h2 {
+        font-size: 18px;
+    }
+
+    #subtitulo {
+        font-size: 18px;
+    }
+
+    p,
+    .texto {
+        font-size: 16px;
+    }
+
+    ol {
+        font-size: 16px;
+    }
+
+    #logo {
+        width: 160px;
+    }
+
+    /* El logo-section pasa de fila a columna */
     .logo-section {
         flex-direction: column;
-        gap: 5px;
+        padding: 10px;
+        gap: 8px;
     }
-    
-    #suscribirse, #ingresar {
-        width: calc(100% - 20px);
-        margin: 5px 0;
+
+    /* Dropdown y campana vuelven al flujo normal (dejan de ser absolute) */
+    .nav-bot-izq {
+        position: static;
+        align-self: flex-start;
+    }
+
+    /* Botones se reparten el ancho disponible */
+    .header-botones {
+        position: static;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #suscribirse,
+    #ingresar {
+        padding: 8px 15px;
+        font-size: 12px;
+        margin: 0;
         text-align: center;
+        flex: 1;
+    }
+
+    /* Los links del nav se muestran en columna centrada en mobile */
+    .navHeaderBot > ul {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .navHeaderBot > ul a {
+        font-size: 12px;
+    }
+
+    /* El artículo y el aside se apilan en columna */
+    .contenedor {
+        flex-direction: column;
+    }
+
+    /* El aside baja al final, ocupa todo el ancho y pierde el borde lateral */
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+        border-left: none;
+        border-top: 2px solid #ccc;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    /* Inputs del formulario ocupan el ancho completo en pantalla chica */
+    .comentarios input[type="text"],
+    .comentarios input[type="email"],
+    .comentarios input[type="tel"],
+    .comentarios input[type="password"],
+    .comentarios select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Footer apila las columnas verticalmente */
+    .footer-inner {
+        flex-direction: column;
+        align-items: center;
     }
 }
